@@ -1,0 +1,6 @@
+- id: jwt-checker
+  name: JWT Checker
+  description: Check if JWT token will be upload
+  entry: hooks/jwt-checker.sh
+  language: python
+  require_serial: true
