@@ -2,7 +2,7 @@
 
 Repo to upload custom hooks to use with pre-commit
 
-# jwt-checker
+### jwt-checker
 
 Hook to find jwt keys on files
 
