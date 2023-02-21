@@ -1,5 +1,5 @@
 - id: jwt-checker
-  name: JWT Checker
+  name: jwt-checker
   description: Check if JWT token will be upload
   entry: hooks/jwt-checker.py
   language: python
