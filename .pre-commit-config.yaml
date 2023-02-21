@@ -1,5 +1,5 @@
 repos:
 -   repo: https://github.com/alice-biometrics/alice-precommit
-    rev: v1
+    rev: v2
     hooks:
     -   id: jwt-checker
