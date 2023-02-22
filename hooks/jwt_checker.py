@@ -19,12 +19,13 @@ def main(argv: Sequence[str] | None = None) -> int:
     for filename in args.filenames:
         with open(filename, "rb") as f:
             content = f.read()
-            if any(regex.search(content) for regex in BLACKLIST_REGEX):
-                private_key_files.append(filename)
+            for match in re.finditer(BLACKLIST_REGEX[0], content):
+                line = content[:match.start()].count(b"\n") + 1
+                private_key_files.append((filename, line))
 
     if private_key_files:
-        for private_key_file in private_key_files:
-            print(f"Private key found: {private_key_file}")
+        for filename, line in private_key_files:
+            print(f"Private key found in {filename}, line {line}")
         return 1
     else:
         return 0
