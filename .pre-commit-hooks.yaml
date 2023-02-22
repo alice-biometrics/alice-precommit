@@ -1,6 +1,5 @@
 - id: jwt-checker
   name: jwt-checker
-  description: Check if JWT token will be upload
-  entry: python jwt-checker.py
-  language: system
-  stage: [commit]
+  description: Check to avoid uploading JWT tokens
+  entry: jwt-checker
+  language: python
