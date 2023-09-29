@@ -5,7 +5,7 @@ import re
 from typing import Sequence
 
 BLACKLIST_REGEX = [
-    re.compile(b"ey\\w*\\..+"),
+    re.compile(b"eyJhb\\w*\\..+"),
 ]
 
 
